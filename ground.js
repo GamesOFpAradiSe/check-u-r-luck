@@ -8,7 +8,7 @@ class Ground {
       this.width = width;
       this.height = height;
      
-      this.img2 = loadImage("boder.png")
+      this.img2 = loadImage("assest/boder.png")
       World.add(world, this.body);
     }
     display(){

@@ -5,9 +5,10 @@ const Constraint = Matter.Constraint;
 
 var engine, world;
 var bg
+var game = play
 
 function preload() {
-    bg = loadImage("bg.png");
+    bg = loadImage("assest/bg.png");
 }
 
 function setup(){
@@ -24,19 +25,28 @@ function setup(){
     division3 = new Division(600,435,100,220)
     division4 = new Division(800,435,100,220)
     division5 = new Division(1000,435,100,220)
-     ic1 = new Ic1(200,200)
-          
+    
+      
+     
+    ball = new Ball(random(width/2-100,width/2+100),20,20) 
+    
+    
+    
     
 }
 
 function draw() {
   background(bg); 
- 
-  Engine.update(engine);
   fill("red")
   textSize(25)
   text(mouseX+","+mouseY,504,55)
+
+    
+  Engine.update(engine);
  
+ 
+
+
   ground.display()
   walll.display()
   wallr.display()
@@ -45,5 +55,6 @@ function draw() {
   division3.display()
   division4.display()
   division5.display()
-  ic1.display()
+  ball.display()
+
 }

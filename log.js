@@ -6,11 +6,11 @@ class Division{
             'density':1.0,
             isStatic : true 
         }
-        this.body = Bodies.rectangle(x, y,w,h, options);
+        this.body = Bodies.rectangle(x, y,w/10,h, options);
         this.w = w
         this.h = h
        
-        this.img = loadImage("stick.png");
+        this.img = loadImage("assest/stick.png");
       
         World.add(world, this.body);
       }
