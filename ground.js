@@ -4,7 +4,7 @@ class Ground {
           isStatic: true
       }
       this.image = image
-      this.body = Bodies.rectangle(x,y,width/2,height/2,options);
+      this.body = Bodies.rectangle(x,y,width,height/2,options);
       this.width = width;
       this.height = height;
      
