@@ -5,7 +5,7 @@ class Ball{
             'friction':1.0,
             'density':1.0
         }
-      
+     
         this.body = Bodies.circle(x, y,r/2, options);
         
         this.r= r;
@@ -15,8 +15,10 @@ class Ball{
         this.image4 = loadImage("assest/ball4.png");
        
         World.add(world, this.body);
+     
     }
       display(){
+      
         var angle = this.body.angle;
         push();
         translate(this.body.position.x, this.body.position.y);
@@ -24,7 +26,8 @@ class Ball{
         imageMode(CENTER);
        image(this.image4, 0, 0, this.r, this.r);
             pop()
-          }
+        }
+          
        
       }
     

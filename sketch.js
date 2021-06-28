@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var engine, world;
-var bg
+var bg,ball = []
 
 
 function preload() {
@@ -64,41 +64,48 @@ l6.scale = 0.06
   
 
 }
-for (var i = 100; i < width-100; i=i+65) 
+for (var i = 80; i < width-80; i=i+65) 
 {
-  plinko2 = new Plinko(i,200)
+  plinko2 = new Plinko(i,150)
   
 
 }
-for (var i = 100; i < width-100; i=i+65) 
+for (var i = 50; i < width-20; i=i+65) 
 {
-  plinko3 = new Plinko(i,150)
+  plinko3 = new Plinko(i,200)
   
 
 }
-    
+for (var i = 80; i < width-80; i=i+65) 
+{
+  plinko4 = new Plinko(i,250)
+  
+
+}   
       
-   
-    ball = new Ball(random(50,1050),-20,20) 
+  
+  
+
     
-    
+  
     
     
 }
 
 function draw() {
   background(bg); 
-  fill("red")
-  textSize(25)
-  text(mouseX+","+mouseY,504,55)
-  
-
-    
   Engine.update(engine);
  
- 
+  if(frameCount%20 === 0){
+
+    ball.push(new Ball(random(50,1050),-20,20))
+    }
+  
 
   drawSprites()
+
+
+
   ground.display()
   walll.display()
   wallr.display()
@@ -107,9 +114,19 @@ function draw() {
   division3.display()
   division4.display()
   division5.display()
-  ball.display()
+ 
+for(var j = 0;j<ball.length;j++){
+
+ball[j].display()
+
+}
   plinko.display()
 plinko2.display2()
 plinko3.display3()
+plinko4.display4()
 
+}
+
+function ballup(){
+  
 }

@@ -22,17 +22,25 @@ class Plinko {
     display2(){
         var pos =this.body.position;
         imageMode(CENTER);
-        for (var i = 50; i < width-50; i=i+65) 
+        for (var i = 80; i < width-80; i=i+65) 
         {
-        image(this.img2,i, 200,40,40);
+        image(this.img2,i, 150,40,40);
         }
       }
       display3(){
         var pos =this.body.position;
         imageMode(CENTER);
-        for (var i = 100; i < width-100; i=i+65) 
+        for (var i = 50; i < width-50; i=i+65) 
         {
-        image(this.img2,i, 150,40,40);
+        image(this.img2,i, 200,40,40);
+        }
+      }
+      display4(){
+        var pos =this.body.position;
+        imageMode(CENTER);
+        for (var i = 80; i < width-80; i=i+65) 
+        {
+        image(this.img2,i, 250,40,40);
         }
       }
   };
